@@ -27,6 +27,31 @@ include_recipe "nownabe::nginx"
 include_recipe "nownabe::percona"
 ```
 
+### Percona
+```ruby
+require "itamae/default_attributes"
+
+# Install Percona Server
+include_recipe "nownabe::percona::server"
+
+# Only server
+include_recipe "nownabe::percona::server::server"
+
+# Only client
+include_recipe "nownabe::percona::server::client"
+
+# Only devel
+include_recipe "nownabe::percona::server::devel"
+```
+
+### Nginx
+```ruby
+require "itamae/default_attributes"
+
+# Install Nginx
+include_recipe "nownabe::nginx::default"
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/nownabe/itamae-plugin-recipes-nownabe/fork )
